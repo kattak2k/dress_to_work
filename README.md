@@ -10,8 +10,6 @@
 
 ## Rules:
 
-- pants > socks > shoes
-- shirt = hat
 - You must put your socks on before your shoes.
 - You must put your pants on before your shoes.
 - You must put your shirt on before your hat.
