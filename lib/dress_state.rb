@@ -8,7 +8,7 @@ class DressState
     @id = method(_state).call
   end
 
-    private
+  private
 
   def shoes
     # socks and pants
