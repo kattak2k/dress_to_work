@@ -4,24 +4,28 @@
 
 require 'dress_to_work'
 
-context 'sequence tests' do
-  it 'get ready with sock and hat' do
-    num = '5 1'
-    expect(dressup(num)).to eq 'socks fail'
-  end
+describe DressCode do
+  context 'Dress Sequence ' do
+    subject { DressCode.new }
 
-  it 'get ready with shoes and hat' do
-    num = '4 1'
-    expect(dressup(num)).to eq 'fail'
-  end
+    it 'get ready with sock and hat' do
+      num = '5 1'
+      expect(subject.dressup(num)).to eq 'socks fail'
+    end
 
-  it 'dress up without hat and leave' do
-    num = '5 2 3 4 6'
-    expect(dressup(num)).to eq 'socks pants shirt shoes leave'
-  end
+    it 'get ready with shoes and hat' do
+      num = '4 1'
+      expect(subject.dressup(num)).to eq 'fail'
+    end
 
-  it 'dress up and leave' do
-    num = '5 2 3 4 1 6'
-    expect(dressup(num)).to eq 'socks pants shirt shoes hat leave'
+    it 'dress up without hat and leave' do
+      num = '5 2 3 4 6'
+      expect(subject.dressup(num)).to eq 'socks pants shirt shoes leave'
+    end
+
+    it 'dress up and leave' do
+      num = '5 2 3 4 1 6'
+      expect(subject.dressup(num)).to eq 'socks pants shirt shoes hat leave'
+    end
   end
 end
