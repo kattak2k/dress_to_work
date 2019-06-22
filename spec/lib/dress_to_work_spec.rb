@@ -10,7 +10,7 @@ describe DressCode do
 
     it 'get ready with sock and hat' do
       num = '5 1'
-      expect(subject.dressup(num)).to eq 'socks fail'
+      expect(subject.dressup(num)).to eq 'socks, fail'
     end
 
     it 'get ready with shoes and hat' do
@@ -20,12 +20,12 @@ describe DressCode do
 
     it 'dress up without hat and leave' do
       num = '5 2 3 4 6'
-      expect(subject.dressup(num)).to eq 'socks pants shirt shoes leave'
+      expect(subject.dressup(num)).to eq 'socks, pants, shirt, shoes, leave'
     end
 
     it 'dress up and leave' do
       num = '5 2 3 4 1 6'
-      expect(subject.dressup(num)).to eq 'socks pants shirt shoes hat leave'
+      expect(subject.dressup(num)).to eq 'socks, pants, shirt, shoes, hat, leave'
     end
   end
 end

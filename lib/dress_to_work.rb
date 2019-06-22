@@ -2,7 +2,7 @@
 require File.expand_path('lib/dress_state.rb')
 
 class DressCode
-  
+
   def dressup(ids)
     ref = []
     completed = []
@@ -30,7 +30,7 @@ class DressCode
     end
 
     # compile the list together
-    go_work.join(' ')
+    go_work.join(', ')
   end
 
   def duty
